@@ -1,34 +1,25 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Touchable } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import Login from './components/view/login';
 
-const App = () => {
+import { NavigationContainer } from '@react-navigation/native';
+const Hello = () => <Text>Hola 2 mundo desde moto</Text>;
+
+
+function App () {
   return (
-    <LinearGradient
-      colors={['#FFAEAE', '#DFB1E0', '#69C6CC', '#69C6CC']}
-      style={styles.linearGradient}
-    >
-
-
-      <Text style={styles.text}>
-        Inicio de Sesión:
-      </Text>
-    </LinearGradient>
+    <Login/>
+    
+    // <View>
+    //   <Viewer/>
+    //   <Hello/>
+    // </View>
   );
 };
 
 const styles = StyleSheet.create({
-  linearGradient: {
-    flex: 1,
-  },
-  text: {
-    color: '#000000',
-    textAlign:'center',
-    padding:20,
-    fontSize: 24,
-    fontWeight: 'bold',
-    backgroundColor:'#FFFFFF'
-  },
+
 });
 
 export default App;
